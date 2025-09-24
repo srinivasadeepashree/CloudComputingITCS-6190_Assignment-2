@@ -220,6 +220,7 @@ Document3 Sample text with different words
 "Document2, Document3 Similarity: 0.50"
 ```
 ## Obtained Output:
+Check the `output/final` folder for the similarity scores
 ```
 Document2, Document3 Similarity: .14	
 Document1, Document3 Similarity: .09	
