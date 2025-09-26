@@ -220,7 +220,7 @@ Document3 Sample text with different words
 "Document2, Document3 Similarity: 0.50"
 ```
 ## Obtained Output:
-Check the `output/final` folder for the similarity scores
+Check the `output/dataNode1/final` and `output/dataNode3/final` folder for the similarity scores
 ```
 Document2, Document3 Similarity: .14	
 Document1, Document3 Similarity: .09	
@@ -228,7 +228,6 @@ Document1, Document2 Similarity: .14
 ```
 
 ### Cluster Performance Comparison: 3 DataNodes vs 1 DataNode
-There are 2 codespace created for both the cases:
 
 | Feature             | 3 DataNodes                          | 1 DataNode                      |
 |---------------------|--------------------------------------|---------------------------------|
@@ -239,4 +238,3 @@ There are 2 codespace created for both the cases:
 | **Throughput**      | High                                 | Low                             |
 | **Data Availability** | Redundant storage, robust          | No redundancy, risky            |
 | **Cluster Health**  | Stable and resilient                 | Vulnerable to disruptions       |
-
