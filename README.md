@@ -152,7 +152,7 @@ hadoop fs -put ./input.txt /input/data
 Run your MapReduce job using the following command: Here I got an error saying output already exists so I changed it to output1 instead as destination folder
 
 ```bash
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/DocumentSimilarity-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/data/input.txt /output1
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/DocumentSimilarity-0.0.1-SNAPSHOT.jar com.example.controller.DocumentSimilarityDriver /input/data/input.txt /output1
 ```
 
 ### 9. **View the Output**
@@ -226,3 +226,17 @@ Document2, Document3 Similarity: .14
 Document1, Document3 Similarity: .09	
 Document1, Document2 Similarity: .14	
 ```
+
+### Cluster Performance Comparison: 3 DataNodes vs 1 DataNode
+There are 2 codespace created for both the cases:
+
+| Feature             | 3 DataNodes                          | 1 DataNode                      |
+|---------------------|--------------------------------------|---------------------------------|
+| **Speed**           | Fast, parallel execution             | Slow, serial execution          |
+| **Parallelism**     | High – tasks split across nodes      | None – all tasks on one node    |
+| **Fault Tolerance** | High – survives node failure         | None – single point of failure  |
+| **Resources**       | Large CPU, RAM, and disk pool        | Limited to one node’s capacity  |
+| **Throughput**      | High                                 | Low                             |
+| **Data Availability** | Redundant storage, robust          | No redundancy, risky            |
+| **Cluster Health**  | Stable and resilient                 | Vulnerable to disruptions       |
+
