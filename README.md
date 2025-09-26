@@ -71,8 +71,12 @@ The Reducer emits each document pair with its similarity score rounded to two de
 │   │   ├── data
 │   │   │   ├── input.txt
 │   ├── output
-│   │   ├── final
-│   │   ├── jobA
+│   │   ├── dataNode1
+│   │   │   ├── final
+│   │   │   ├── jobA
+│   │   ├── dataNode3
+│   │   │   ├── final
+│   │   │   ├── jobA
 ├── src
 │   ├── main
 │   │   ├── java
